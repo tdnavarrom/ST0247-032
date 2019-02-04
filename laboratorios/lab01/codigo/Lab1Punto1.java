@@ -10,7 +10,7 @@ public class Lab1Punto1 {
         HashMap<Integer, Vertices> hmap = new HashMap<Integer, Vertices>();
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("./Resources/medellin_colombia-grande.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("medellin_colombia-grande.txt"));
             String str_line = reader.readLine(); // salta la info
             str_line = reader.readLine();
 
