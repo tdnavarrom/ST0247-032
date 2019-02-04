@@ -64,10 +64,12 @@ class Graph():
   
 # Driver program to test above function 
 file=open("Entrada.txt","r") 
+for i in range (0, 22):
+    print (file.readline(i))
 file.close
 #Caso 1
-    #3-numero de arcos
-    #3-numero de nodos 
+    #3-numero de arcos (E)
+    #3-numero de nodos (V)
     #0 1
     #1 2
     #2 0
@@ -83,8 +85,8 @@ if (g1.isBipartite(0)):
 else: 
   print("No es Bicoloreable :(")
 #Caso 2
-    #3-numero de nodos 
-    #2-numero de arcos 
+    #3-numero de nodos (V)
+    #2-numero de arcos (E)
     #0 1
     #1 2
 
@@ -101,8 +103,8 @@ if (g2.isBipartite(0)):
 else: 
   print("No es Bicoloreable :(")
 #Caso 3
-    #9-numero de nodos
-    #8-numero de arcos 
+    #9-numero de nodos (V)
+    #8-numero de arcos (E)
     #0 1
     #0 2
     #0 3
