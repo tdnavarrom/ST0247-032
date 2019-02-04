@@ -10,19 +10,14 @@ public class Lab1Punto1 {
         HashMap<Integer, Vertices> hmap = new HashMap<Integer, Vertices>();
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("medellin_colombia-grande.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("./Resources/medellin_colombia-grande.txt"));
             String str_line = reader.readLine(); // salta la info
             str_line = reader.readLine();
 
 
-            while (str_line != null){
+            while (!str_line.isEmpty()){
                 String[] linea_particionada = str_line.split(" ");
                 String place = "";
-
-                if (str_line.isEmpty()) { //revisa si la linea esta vacia
-                    str_line = reader.readLine();
-                    break;
-                }
 
                 if ((linea_particionada.length >= 4)) {
                     for (int i = 3; i < linea_particionada.length;i++) {
@@ -40,6 +35,7 @@ public class Lab1Punto1 {
                 str_line = reader.readLine();
             }
 
+            str_line = reader.readLine();
             str_line = reader.readLine(); // Esta linea salta la info.
 
             while (str_line != null){
