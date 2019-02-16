@@ -5,8 +5,7 @@ import java.util.LinkedList;
 /**
  * Implementacion de un grafo dirigido usando listas de adyacencia
  *
- * @author Mauricio Toro, Mateo Agudelo, María Sofía Uribe , Isabel Graciano
- */
+ * @author Mauricio Toro, Mateo Agudelo
 public class DigraphAL extends Digraph {
 
     ArrayList<LinkedList<Pair<Integer,Integer>>> lista;
