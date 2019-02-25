@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /*
 *
-* Este Algorimto esta basado en el algoritmo de MAria Sofia Uribe
+* Este Algorimto esta basado en el algoritmo de Maria Sofia Uribe
 * y fue un trabajo en equipo con Juan Pablo Leal y Santiago Albisser
 *
 *
