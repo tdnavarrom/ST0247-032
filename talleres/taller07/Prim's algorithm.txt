@@ -1,0 +1,1 @@
+The algorithm in the second question (Prim's algorithm) its a Greedy algorithm, thats why it not always going to throw the optimal result.
