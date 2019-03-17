@@ -9,8 +9,10 @@ class Backtracking:
     def minimumCostMain(self, g, start, end):
         evaluated = [False]*g.size
         cost = self.minimumCost(g, start, end, math.inf , 0, evaluated)
-        if cost == math.inf: return "No hay camino posible"
-        else: return cost
+        if cost == math.inf: 
+            return "No hay camino posible"
+        else: 
+            return cost
 
     def minimumCost(self, g, start_v, end_v, minCost, accumulated, evaluated):
         evaluated[start_v] = True
@@ -29,14 +31,11 @@ class Backtracking:
 prueba = Backtracking()
 
 g1 = ALGraph(5)
-g1.addArc(2, 1, 1)
-g1.addArc(1, 2, 1)
-g1.addArc(1, 4, 1)
-g1.addArc(2, 1, 5)
-g1.addArc(1, 3, 1)
+g1.addArc(0, 0, 1)
 g1.addArc(1, 1, 1)
+g1.addArc(2, 2, 1)
+g1.addArc(3, 3, 1)
+g1.addArc(1, 3, 1)
 g1.addArc(2, 3, 1)
-g1.addArc(3, 1, 1)
-g1.addArc(3, 4, 3)
 
 print(prueba.minimumCostMain(g1, 0, 5))
