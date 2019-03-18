@@ -6,10 +6,12 @@ import math
 
 class Backtracking:
 
+    min = 9999999
+
     def minimumCostMain(self, g, start, end):
         evaluated = [False]*g.size
-        cost = self.minimumCost(g, start, end, math.inf , 0, evaluated)
-        if cost == math.inf: 
+        cost = self.minimumCost(g, start, end, self.min , 0, evaluated)
+        if cost == self.min: 
             return "No hay camino posible"
         else: 
             return cost
@@ -17,13 +19,14 @@ class Backtracking:
     def minimumCost(self, g, start_v, end_v, minCost, accumulated, evaluated):
         evaluated[start_v] = True
         if start_v == end_v:
-            if minCost > accumulated: minCost = accumulated
+            if minCost > accumulated: 
+                minCost = accumulated
             return minCost
         else:
             children = g.getSuccessors(start_v)
             for kid in children:
                 costFatherKid = g.getWeight(start_v,kid)
-                if (costFatherKid < minCost and start_v != kid and evaluated[kid] is False):
+                if ((costFatherKid < minCost) and (start_v != kid) and (evaluated[kid] is False)):
                     minCost = min(self.minimumCost(g,kid,end_v,minCost,accumulated + costFatherKid, evaluated), minCost)
                     evaluated[kid] = False
             return minCost
@@ -38,4 +41,4 @@ g1.addArc(3, 3, 1)
 g1.addArc(1, 3, 1)
 g1.addArc(2, 3, 1)
 
-print(prueba.minimumCostMain(g1, 0, 5))
+print(prueba.minimumCostMain(g1, 0, 4))
