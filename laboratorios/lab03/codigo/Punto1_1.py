@@ -6,12 +6,12 @@ import math
 
 class Backtracking:
 
-    min = 9999999
+    min_cost = 9999999
 
     def minimumCostMain(self, g, start, end):
         evaluated = [False]*g.size
-        cost = self.minimumCost(g, start, end, self.min , 0, evaluated)
-        if cost == self.min: 
+        cost = self.minimumCost(g, start, end, self.min_cost , 0, evaluated)
+        if cost == self.min_cost: 
             return "No hay camino posible"
         else: 
             return cost
